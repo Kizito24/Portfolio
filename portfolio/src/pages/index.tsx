@@ -1,22 +1,12 @@
 // import Image from "next/image";
-import { Geist, Geist_Mono } from "next/font/google";
 import Head from "next/head";
 import Header from "../../components/Header";
+import Hero from "../../components/Hero";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export default function Home() {
   return (
-    <div  className={`${geistSans.className} ${geistMono.className} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
->
+    <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-scroll">
   <Head>
     <title>Kizito&#39;s Portfolio</title>
   </Head>
@@ -24,7 +14,9 @@ export default function Home() {
   {/* Header */}
     <Header />
   {/* Hero */}
-  
+    <section id="hero" className="snap-center">
+      <Hero />
+    </section>
   {/* About */}
 
   {/* Experience */}

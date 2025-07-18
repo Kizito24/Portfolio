@@ -2,6 +2,7 @@ import React from 'react'
 import { SocialIcon } from 'react-social-icons'
 import { motion } from "motion/react"
 
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
 type Props = {}
 
 export default function Header({}: Props) {
