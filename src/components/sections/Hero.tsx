@@ -52,14 +52,14 @@ export default function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1, duration: 0.6 }}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-emerald-500/30 text-emerald-600 dark:text-emerald-400 text-sm mb-8"
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-emerald-500/30 text-emerald-600 dark:text-emerald-400 text-xs sm:text-sm mb-8"
         >
-          <span className="relative flex h-2 w-2" aria-hidden="true">
+          <span className="relative flex h-2 w-2 shrink-0" aria-hidden="true">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
             <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
           </span>
-          Accepting new contracts — USD · Remote · Worldwide
-          <ChevronRight size={14} />
+          Accepting new contracts<span className="hidden sm:inline"> — USD · Remote · Worldwide</span>
+          <ChevronRight size={14} className="shrink-0" />
         </motion.div>
 
         {/* Name */}

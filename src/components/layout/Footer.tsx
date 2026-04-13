@@ -25,7 +25,7 @@ export default function Footer() {
           </div>
 
           {/* Nav links */}
-          <nav className="flex items-center gap-6" aria-label="Footer navigation">
+          <nav className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2" aria-label="Footer navigation">
             {navLinks.map((link) => (
               <Link
                 key={link.href}

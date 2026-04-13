@@ -90,7 +90,7 @@ export default function Services() {
               <div className="relative flex flex-col flex-1 p-6 sm:p-8">
                 {/* Header */}
                 <div className="flex items-start justify-between mb-5">
-                  <div>
+                  <div className="min-w-0">
                     <span
                       className={`inline-block text-xs font-semibold px-2.5 py-1 rounded-full mb-2 ${
                         svc.featured
