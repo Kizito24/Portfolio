@@ -95,12 +95,12 @@ export default function About() {
               {/* Photo */}
               <div className="relative rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-700/60 shadow-2xl aspect-square">
                 <Image
-                  src="/lion.jpg"
+                  src="https://github.com/Kizito24.png"
                   alt="Kizito Chiazor — FinTech Engineer & Cloud Architect"
                   width={400}
                   height={400}
+                  sizes="(max-width: 768px) 100vw, 400px"
                   className="w-full h-full object-cover"
-                  priority
                 />
                 <div
                   className="absolute bottom-0 left-0 right-0 h-1/3 pointer-events-none"

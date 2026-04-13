@@ -1,14 +1,23 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
   reactStrictMode: true,
 
   allowedDevOrigins: [
     '192.168.0.42',
-    // Add other IPs as needed
-  ]
-  
+  ],
+
+  images: {
+    formats: ['image/avif', 'image/webp'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'github.com',
+      },
+    ],
+  },
+
+  compress: true,
 };
 
 
