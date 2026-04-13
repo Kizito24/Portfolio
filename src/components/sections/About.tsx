@@ -95,7 +95,7 @@ export default function About() {
               {/* Photo */}
               <div className="relative rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-700/60 shadow-2xl aspect-square">
                 <Image
-                  src="https://github.com/Kizito24.png"
+                  src="https://avatars.githubusercontent.com/Kizito24"
                   alt="Kizito Chiazor — FinTech Engineer & Cloud Architect"
                   width={400}
                   height={400}
