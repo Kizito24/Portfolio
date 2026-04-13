@@ -96,7 +96,7 @@ export default function About() {
               <div className="relative rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-700/60 shadow-2xl aspect-square">
                 <Image
                   src="/lion.jpg"
-                  alt="Kizito Chiazor — FinTech Engineer & Cybersecurity Consultant"
+                  alt="Kizito Chiazor — FinTech Engineer & Cloud Architect"
                   width={400}
                   height={400}
                   className="w-full h-full object-cover"
@@ -128,13 +128,13 @@ export default function About() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="mt-10 p-5 rounded-2xl glass border border-zinc-200 dark:border-zinc-800/60"
             >
-              <p className="text-xs font-semibold uppercase tracking-widest text-zinc-400 dark:text-zinc-600 mb-3">
+              <p className="text-xs font-semibold uppercase tracking-widest text-zinc-500 dark:text-zinc-500 mb-3">
                 Currently accepting
               </p>
               <ul className="space-y-2">
                 {[
                   'FinTech & trading system contracts',
-                  'Cybersecurity audits & penetration tests',
+                  'Cloud architecture & infrastructure',
                   'Full-stack project contracts',
                   'Technical advisory (hourly / retainer)',
                 ].map((item) => (
@@ -145,7 +145,7 @@ export default function About() {
                 ))}
               </ul>
               <div className="mt-4 pt-4 border-t border-zinc-200 dark:border-zinc-800 flex items-center justify-between">
-                <span className="text-xs text-zinc-400 dark:text-zinc-600">Invoicing currencies</span>
+                <span className="text-xs text-zinc-500 dark:text-zinc-500">Invoicing currencies</span>
                 <div className="flex gap-1.5">
                   {['USD', 'EUR', 'GBP'].map((c) => (
                     <span
@@ -175,13 +175,13 @@ export default function About() {
             <div className="space-y-4 text-zinc-600 dark:text-zinc-400 leading-relaxed mb-8">
               <p>
                 I&apos;m <strong className="text-zinc-900 dark:text-zinc-200">Kizito Chiazor</strong> — a software
-                engineer and cybersecurity consultant who has built financial tools, secured web applications,
+                engineer and cloud architect who has built financial tools, shipped production infrastructure,
                 and founded a venture-backed startup. I work with organisations that need{' '}
                 <strong className="text-zinc-900 dark:text-zinc-200">precision, not just effort.</strong>
               </p>
               <p>
                 My background spans the full engineering stack — from pixel-perfect React frontends to
-                low-latency Python APIs, hardened cloud infrastructure, and smart contract audits.
+                low-latency Python APIs, Terraform-managed AWS environments, and containerised microservices.
                 Clients in fintech trust me because I understand that a bug in a trading system isn&apos;t
                 a bug — it&apos;s a{' '}
                 <strong className="text-zinc-900 dark:text-zinc-200">financial liability.</strong>
@@ -197,14 +197,14 @@ export default function About() {
 
             {/* Who I work with */}
             <div className="p-5 rounded-2xl glass border border-zinc-200 dark:border-zinc-800/60 mb-6">
-              <p className="text-xs font-semibold uppercase tracking-widest text-zinc-400 dark:text-zinc-600 mb-3">
+              <p className="text-xs font-semibold uppercase tracking-widest text-zinc-500 dark:text-zinc-500 mb-3">
                 Who I work with
               </p>
               <div className="flex flex-wrap gap-2">
                 {[
                   'Hedge Funds',
                   'FinTech Startups',
-                  'Cybersecurity Teams',
+                  'Cloud-Native Teams',
                   'SaaS Companies',
                   'US / UK / EU Clients',
                   'Venture-Backed Startups',

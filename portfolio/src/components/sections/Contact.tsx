@@ -83,7 +83,7 @@ export default function Contact() {
             <span className="gradient-text">Start a Project?</span>
           </h2>
           <p className="text-zinc-500 dark:text-zinc-500 mt-4 max-w-xl mx-auto leading-relaxed">
-            I work with fintech companies, hedge funds, and security-focused organisations globally.
+            I work with fintech companies, hedge funds, and cloud-native organisations globally.
             Book a call or drop a message — let&apos;s see if we&apos;re a fit.
           </p>
         </motion.div>
@@ -141,7 +141,7 @@ export default function Contact() {
             {/* Merged Process + Engagement card */}
             <div className="p-5 rounded-2xl glass border border-zinc-200 dark:border-zinc-800/60">
               {/* Process steps */}
-              <p className="text-xs font-bold uppercase tracking-[0.18em] text-zinc-400 dark:text-zinc-600 mb-4">
+              <p className="text-xs font-bold uppercase tracking-[0.18em] text-zinc-500 dark:text-zinc-500 mb-4">
                 How it works
               </p>
               <div className="space-y-4">
@@ -162,7 +162,7 @@ export default function Contact() {
               <div className="my-5 border-t border-zinc-200 dark:border-zinc-800" />
 
               {/* Engagement details */}
-              <p className="text-xs font-bold uppercase tracking-[0.18em] text-zinc-400 dark:text-zinc-600 mb-4">
+              <p className="text-xs font-bold uppercase tracking-[0.18em] text-zinc-500 dark:text-zinc-500 mb-4">
                 Engagement details
               </p>
               <div className="space-y-3">
@@ -180,7 +180,7 @@ export default function Contact() {
 
             {/* Socials */}
             <div>
-              <p className="text-xs font-bold uppercase tracking-[0.18em] text-zinc-400 dark:text-zinc-600 mb-3">
+              <p className="text-xs font-bold uppercase tracking-[0.18em] text-zinc-500 dark:text-zinc-500 mb-3">
                 Find me on
               </p>
               <div className="flex flex-wrap gap-2">
@@ -208,7 +208,7 @@ export default function Contact() {
             viewport={{ once: true, margin: '-60px' }}
             transition={{ duration: 0.65, ease: 'easeOut', delay: 0.1 }}
           >
-            <p className="text-xs font-bold uppercase tracking-[0.18em] text-zinc-400 dark:text-zinc-600 mb-4">
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-zinc-500 dark:text-zinc-500 mb-4">
               Or send a message
             </p>
 
@@ -264,7 +264,7 @@ export default function Contact() {
                 {/* Budget */}
                 <div>
                   <label htmlFor="budget" className="block text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-1.5">
-                    Project Budget <span className="text-zinc-400 dark:text-zinc-600 font-normal">(USD)</span>
+                    Project Budget <span className="text-zinc-500 dark:text-zinc-500 font-normal">(USD)</span>
                   </label>
                   <select
                     id="budget" name="budget"
@@ -314,7 +314,7 @@ export default function Contact() {
                   )}
                 </motion.button>
 
-                <p className="text-center text-xs text-zinc-400 dark:text-zinc-600">
+                <p className="text-center text-xs text-zinc-500 dark:text-zinc-500">
                   Typical response: within 4 hours · NDA available on request
                 </p>
 

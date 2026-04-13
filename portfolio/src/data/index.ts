@@ -28,10 +28,10 @@ export const skills = {
     { name: 'Redis', level: 55 },
   ],
   other: [
-    { name: 'Cybersecurity', level: 78 },
-    { name: 'AWS / Cloud', level: 65 },
-    { name: 'Blockchain', level: 62 },
-    { name: 'Docker', level: 70 },
+    { name: 'AWS / Cloud', level: 84 },
+    { name: 'Terraform', level: 76 },
+    { name: 'Kubernetes', level: 72 },
+    { name: 'Docker', level: 82 },
     { name: 'Git', level: 92 },
   ],
 };
@@ -57,21 +57,21 @@ export const services = [
     featured: true,
   },
   {
-    id: 'security',
+    id: 'cloud',
     eyebrow: 'High Demand',
-    title: 'Cybersecurity Consulting',
-    subtitle: 'Offensive & Defensive Security',
+    title: 'Cloud Engineering',
+    subtitle: 'Infrastructure, DevOps & IaC',
     description:
-      'Find what attackers will find — before they do. Penetration testing, security audits, and hardening strategies for web applications and cloud infrastructure.',
+      'Scalable, resilient cloud infrastructure designed for production. From greenfield AWS architecture to migration, containerisation, and fully automated CI/CD pipelines.',
     deliverables: [
-      'OWASP Top 10 penetration testing',
-      'Full vulnerability assessment & CVE report',
-      'Cloud & infrastructure security review',
-      'Remediation roadmap + executive summary',
+      'AWS architecture design & provisioning',
+      'Infrastructure as Code with Terraform',
+      'Kubernetes cluster setup & orchestration',
+      'CI/CD pipelines · cost optimisation · monitoring',
     ],
-    gradient: 'from-red-500 to-rose-500',
+    gradient: 'from-sky-500 to-blue-600',
     startingFrom: '$2,500',
-    cta: 'Book an Audit',
+    cta: 'Discuss Infrastructure',
     ctaHref: '#contact',
     featured: false,
   },
@@ -104,7 +104,7 @@ export const services = [
     deliverables: [
       'Codebase quality & maintainability audit',
       'Architecture scalability assessment',
-      'Security vulnerability scan',
+      'Cloud infrastructure risk assessment',
       'Engineering team & process evaluation',
     ],
     gradient: 'from-amber-500 to-orange-500',
@@ -203,19 +203,19 @@ export const experiences = [
   },
   {
     year: '2023',
-    role: 'Cybersecurity Intern',
-    company: 'Tech Security Firm',
+    role: 'Cloud Engineering Intern',
+    company: 'Tech Infrastructure Firm',
     description:
-      'Executed vulnerability assessments and penetration tests on client web infrastructure. Produced executive-level threat reports and remediation roadmaps. Identified 30+ critical vulnerabilities.',
-    tags: ['Pentesting', 'OWASP', 'Network Security', 'Python'],
+      'Provisioned and managed AWS environments for client workloads. Wrote Terraform modules for repeatable infrastructure, containerised legacy services with Docker, and built automated deployment pipelines that cut release time by 60%.',
+    tags: ['AWS', 'Terraform', 'Docker', 'CI/CD'],
   },
   {
     year: '2021 — Present',
     role: 'Software Engineering Student',
     company: 'University',
     description:
-      'Pursuing BSc Software Engineering with a focus on algorithms, Networking, and Cybersecurity. Active in national hackathons, open-source projects, and campus tech leadership.',
-    tags: ['Algorithms', 'Security', 'Research', 'Open Source'],
+      'Pursuing BSc Software Engineering with a focus on algorithms, cloud infrastructure, and distributed systems. Active in national hackathons, open-source projects, and campus tech leadership.',
+    tags: ['Algorithms', 'Cloud', 'Research', 'Open Source'],
   },
 ];
 

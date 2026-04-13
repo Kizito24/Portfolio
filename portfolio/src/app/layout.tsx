@@ -13,11 +13,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: 'Kizito Chiazor — Software Engineer & Founder',
   description:
-    'Software Engineer, Cybersecurity Enthusiast, and Entrepreneur building global digital solutions. Specializing in React, Next.js, Python, and modern web technologies.',
+    'Software Engineer, Cloud Architect, and Entrepreneur building global digital solutions. Specializing in React, Next.js, Python, AWS, and modern web technologies.',
   keywords: [
     'software engineer',
     'developer',
-    'cybersecurity',
+    'cloud engineer',
     'React',
     'Next.js',
     'Python',

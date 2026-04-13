@@ -6,13 +6,13 @@ import { ExternalLink, Star, TrendingUp } from 'lucide-react';
 import { GithubIcon } from '@/components/ui/Icons';
 import { projects } from '@/data';
 
-const categories = ['All', 'Web App', 'Platform', 'Security', 'Blockchain', 'Dev Tools', 'FinTech'];
+const categories = ['All', 'Web App', 'Platform', 'Cloud', 'Blockchain', 'Dev Tools', 'FinTech'];
 
 // Color swatches per category
 const categorySwatches: Record<string, string> = {
   'Web App':    'from-blue-500/30 to-indigo-500/30',
   'Platform':   'from-emerald-500/30 to-teal-500/30',
-  'Security':   'from-red-500/30 to-rose-500/30',
+  'Cloud':      'from-sky-500/30 to-blue-600/30',
   'Blockchain': 'from-amber-500/30 to-orange-500/30',
   'Dev Tools':  'from-violet-500/30 to-purple-500/30',
   'FinTech':    'from-indigo-500/30 to-cyan-500/30',
@@ -46,7 +46,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="relative py-24 sm:py-32 bg-white dark:bg-zinc-950 overflow-hidden"
+      className="relative py-24 sm:py-32 bg-zinc-50 dark:bg-[#0d0d10] overflow-hidden"
       aria-labelledby="projects-heading"
     >
       {/* BG blobs */}
@@ -74,7 +74,7 @@ export default function Projects() {
             Featured Projects
           </h2>
           <p className="text-zinc-500 dark:text-zinc-500 mt-4 max-w-xl mx-auto">
-            A selection of real-world projects that demonstrate my range across web, security, and blockchain.
+            A selection of real-world projects that demonstrate my range across web, cloud, and blockchain.
           </p>
         </motion.div>
 

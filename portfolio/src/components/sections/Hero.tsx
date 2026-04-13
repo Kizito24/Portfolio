@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 const roles = [
   'FinTech Engineer',
-  'Cybersecurity Consultant',
+  'Cloud Engineer',
   'Full-Stack Developer',
   'Technical Advisor',
 ];
@@ -15,7 +15,7 @@ const roles = [
 const stats = [
   { value: '$200K+', label: 'Client Value Delivered' },
   { value: '3', label: 'Continents Served' },
-  { value: '47+', label: 'Vulnerabilities Eliminated' },
+  { value: '99.9%', label: 'Uptime Delivered' },
 ];
 
 export default function Hero() {
@@ -102,7 +102,7 @@ export default function Hero() {
         >
           I build{' '}
           <span className="text-zinc-700 dark:text-zinc-300 font-semibold">financial-grade software systems</span>
-          {' '}and eliminate cyber vulnerabilities before they become liabilities.
+          {' '}and ship cloud infrastructure that scales without surprises.
           Trusted by startups and enterprises across{' '}
           <span className="text-zinc-700 dark:text-zinc-300 font-semibold">3 continents.</span>
         </motion.p>
@@ -135,7 +135,7 @@ export default function Hero() {
           <a
             href="/resume.pdf"
             download
-            className="inline-flex items-center gap-1.5 text-zinc-400 dark:text-zinc-600 hover:text-zinc-700 dark:hover:text-zinc-300 font-medium transition-colors text-sm mt-1"
+            className="inline-flex items-center gap-1.5 text-zinc-500 dark:text-zinc-500 hover:text-zinc-700 dark:hover:text-zinc-300 font-medium transition-colors text-sm mt-1"
           >
             <Download size={13} />
             Download Resume
@@ -167,7 +167,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.05, duration: 0.7 }}
-          className="text-xs text-zinc-400 dark:text-zinc-600 tracking-wide"
+          className="text-xs text-zinc-500 dark:text-zinc-500 tracking-wide"
         >
           NDA-Ready · USD Invoicing · Remote Worldwide · 48hr Start
         </motion.p>

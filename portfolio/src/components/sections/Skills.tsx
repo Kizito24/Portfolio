@@ -52,7 +52,7 @@ const categories: CategoryCard[] = [
   },
   {
     key: 'other',
-    label: 'Security & Cloud',
+    label: 'Cloud & DevOps',
     icon: Cpu,
     color: 'from-purple-500 to-pink-500',
     dotColor: 'bg-purple-500',
@@ -62,7 +62,7 @@ const categories: CategoryCard[] = [
 
 const extraTech = [
   'Solidity', 'Figma', 'Linux', 'Bash', 'CI/CD',
-  'GitHub Actions', 'Nginx', 'JWT', 'OAuth2', 'WebSockets',
+  'GitHub Actions', 'Nginx', 'AWS Lambda', 'CloudWatch', 'WebSockets',
 ];
 
 function SkillBar({ name, level, delay = 0, dotColor }: Skill & { delay?: number; dotColor: string }) {
@@ -106,7 +106,7 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="relative py-24 sm:py-32 bg-zinc-50 dark:bg-[#0d0d10] overflow-hidden"
+      className="relative py-24 sm:py-32 bg-white dark:bg-zinc-950 overflow-hidden"
       aria-labelledby="skills-heading"
     >
       {/* Background accent */}
@@ -181,12 +181,12 @@ export default function Skills() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="mt-14"
         >
-          <p className="text-sm text-zinc-500 dark:text-zinc-600 mb-4 text-center">Also experienced with</p>
+          <p className="text-sm text-zinc-500 dark:text-zinc-400 mb-4 text-center">Also experienced with</p>
 
           {/* Mobile: scrollable single-row with fade masks */}
           <div className="relative sm:hidden">
-            <div className="absolute left-0 top-0 bottom-0 w-10 bg-gradient-to-r from-zinc-50 dark:from-[#0d0d10] to-transparent z-10 pointer-events-none" aria-hidden="true" />
-            <div className="absolute right-0 top-0 bottom-0 w-10 bg-gradient-to-l from-zinc-50 dark:from-[#0d0d10] to-transparent z-10 pointer-events-none" aria-hidden="true" />
+            <div className="absolute left-0 top-0 bottom-0 w-10 bg-gradient-to-r from-white dark:from-zinc-950 to-transparent z-10 pointer-events-none" aria-hidden="true" />
+            <div className="absolute right-0 top-0 bottom-0 w-10 bg-gradient-to-l from-white dark:from-zinc-950 to-transparent z-10 pointer-events-none" aria-hidden="true" />
             <div className="flex gap-2 overflow-x-auto scrollbar-none px-4 pb-1">
               {extraTech.map((tech) => (
                 <span

@@ -44,7 +44,7 @@ export default function Experience() {
         <div className="relative">
           {/* Vertical line */}
           <div
-            className="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-indigo-500/60 via-violet-500/40 to-transparent"
+            className="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-indigo-500 via-violet-500/70 to-transparent dark:from-indigo-500/60 dark:via-violet-500/40 dark:to-transparent"
             aria-hidden="true"
           />
 

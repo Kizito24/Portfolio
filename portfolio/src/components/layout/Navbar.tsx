@@ -104,7 +104,7 @@ export default function Navbar() {
             <ThemeToggle />
             <button
               onClick={() => setMobileOpen((v) => !v)}
-              className="w-9 h-9 flex items-center justify-center rounded-lg glass glass-hover text-zinc-400 hover:text-zinc-100 transition-colors"
+              className="w-9 h-9 flex items-center justify-center rounded-lg glass glass-hover text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
               aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={mobileOpen}
             >
@@ -122,7 +122,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.2 }}
-            className="fixed top-[64px] left-0 right-0 z-40 glass border-b border-zinc-800/50 md:hidden"
+            className="fixed top-[64px] left-0 right-0 z-40 glass border-b border-zinc-200/60 dark:border-zinc-800/50 md:hidden"
           >
             <nav className="max-w-6xl mx-auto px-6 py-4 flex flex-col gap-1">
               {navLinks.map((link) => (
@@ -130,7 +130,7 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="py-3 px-3 rounded-lg text-zinc-400 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 hover:bg-zinc-100/50 dark:hover:bg-zinc-800/50 transition-colors font-medium"
+                  className="py-3 px-3 rounded-lg text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 hover:bg-zinc-100/50 dark:hover:bg-zinc-800/50 transition-colors font-medium"
                 >
                   {link.label}
                 </Link>

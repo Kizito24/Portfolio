@@ -51,7 +51,7 @@ export default function Services() {
           </h2>
           <p className="text-zinc-500 dark:text-zinc-500 mt-4 max-w-xl mx-auto leading-relaxed">
             Focused solutions for high-stakes technical challenges — delivered to
-            fintech companies, hedge funds, and security-conscious organisations worldwide.
+            fintech companies, hedge funds, and cloud-native organisations worldwide.
           </p>
         </motion.div>
 
@@ -109,7 +109,7 @@ export default function Services() {
                   </div>
                   {/* Starting price */}
                   <div className="text-right shrink-0 ml-4">
-                    <div className="text-xs text-zinc-400 dark:text-zinc-600 mb-0.5">Starting from</div>
+                    <div className="text-xs text-zinc-500 dark:text-zinc-500 mb-0.5">Starting from</div>
                     <div className="text-lg font-extrabold gradient-text tabular-nums">{svc.startingFrom}</div>
                   </div>
                 </div>
