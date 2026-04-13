@@ -133,8 +133,8 @@ export default function Hero() {
           </div>
           {/* Resume text link below the pair */}
           <a
-            href="/resume.pdf"
-            download
+            href="/Kizito_Chiazor_CV.pdf"
+            download="Kizito_Chiazor_CV.pdf"
             className="inline-flex items-center gap-1.5 text-zinc-500 dark:text-zinc-500 hover:text-zinc-700 dark:hover:text-zinc-300 font-medium transition-colors text-sm mt-1"
           >
             <Download size={13} />
