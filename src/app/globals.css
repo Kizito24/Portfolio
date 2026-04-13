@@ -57,16 +57,26 @@ body {
 
 /* Light mode glass */
 :root:not(.dark) .glass {
-  background: rgba(255, 255, 255, 0.75);
-  border-color: rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.92);
+  border-color: rgba(0, 0, 0, 0.09);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05), 0 4px 14px rgba(0,0,0,0.04);
 }
 :root:not(.dark) .glass-hover:hover {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08), 0 8px 24px rgba(0,0,0,0.06);
 }
 
 /* ─── Gradient text ──────────────────────────────────────────────── */
 .gradient-text {
   background: linear-gradient(135deg, #818cf8 0%, #a78bfa 50%, #c084fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Richer gradient in light mode for sufficient contrast on white */
+:root:not(.dark) .gradient-text {
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #9333ea 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -90,6 +100,15 @@ body {
 }
 .glow-indigo-sm {
   box-shadow: 0 0 20px rgba(129, 140, 248, 0.25);
+}
+
+/* Softer glow in light mode — avoids harsh neon on white */
+:root:not(.dark) .glow-indigo {
+  box-shadow: 0 0 32px rgba(79, 70, 229, 0.18),
+              0 0 64px rgba(79, 70, 229, 0.07);
+}
+:root:not(.dark) .glow-indigo-sm {
+  box-shadow: 0 0 16px rgba(79, 70, 229, 0.14);
 }
 
 /* ─── Animation helpers ──────────────────────────────────────────── */

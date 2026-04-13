@@ -101,7 +101,7 @@ export default function Experience() {
                       whileInView={{ scale: [0, 1.2, 1] }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.5, delay: i * 0.08 }}
-                      className="w-3.5 h-3.5 rounded-full gradient-bg ring-4 ring-zinc-50 dark:ring-[#0d0d10] shadow-md"
+                      className="w-3.5 h-3.5 rounded-full gradient-bg ring-4 ring-[#f1f1f0] dark:ring-[#0d0d10] shadow-md"
                     />
                   </div>
 

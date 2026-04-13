@@ -103,7 +103,7 @@ export default function About() {
                   className="w-full h-full object-cover"
                 />
                 <div
-                  className="absolute bottom-0 left-0 right-0 h-1/3 pointer-events-none"
+                  className="absolute bottom-0 left-0 right-0 h-1/3 pointer-events-none hidden dark:block"
                   style={{ background: 'linear-gradient(to top, rgba(9,9,11,0.65), transparent)' }}
                   aria-hidden="true"
                 />

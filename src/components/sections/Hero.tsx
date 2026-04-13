@@ -37,9 +37,9 @@ export default function Hero() {
     >
       {/* ── Background ── */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
-        <div className="absolute -top-48 -left-48 w-[640px] h-[640px] rounded-full bg-indigo-500/20 dark:bg-indigo-500/12 blur-[130px] animate-blob" />
-        <div className="absolute -bottom-48 -right-48 w-[560px] h-[560px] rounded-full bg-emerald-500/15 dark:bg-emerald-500/10 blur-[130px] animate-blob animation-delay-2000" />
-        <div className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-[400px] h-[400px] rounded-full bg-violet-500/10 blur-[100px] animate-blob animation-delay-4000" />
+        <div className="absolute -top-48 -left-48 w-[640px] h-[640px] rounded-full bg-indigo-500/10 dark:bg-indigo-500/12 blur-[130px] animate-blob" />
+        <div className="absolute -bottom-48 -right-48 w-[560px] h-[560px] rounded-full bg-emerald-500/8 dark:bg-emerald-500/10 blur-[130px] animate-blob animation-delay-2000" />
+        <div className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-[400px] h-[400px] rounded-full bg-violet-500/6 dark:bg-violet-500/10 blur-[100px] animate-blob animation-delay-4000" />
         <div className="absolute inset-0 hidden dark:block dot-grid opacity-40" />
         <div className="absolute inset-0 dark:block hidden [background:radial-gradient(ellipse_80%_60%_at_50%_50%,transparent_30%,#09090b_100%)]" />
       </div>
