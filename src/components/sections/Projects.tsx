@@ -46,7 +46,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="relative py-24 sm:py-32 bg-zinc-50 dark:bg-[#0d0d10] overflow-hidden"
+      className="relative py-24 sm:py-32 light-grid dark:bg-[#0d0d10] overflow-hidden"
       aria-labelledby="projects-heading"
     >
       {/* BG blobs */}

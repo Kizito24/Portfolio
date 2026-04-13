@@ -117,6 +117,21 @@ body {
   background-size: 72px 72px;
 }
 
+/* ─── Light-mode alternating section backgrounds ─────────────────── */
+/* Grid sections: pure white cells with subtle black grid lines */
+:root:not(.dark) .light-grid {
+  background-color: #ffffff;
+  background-image:
+    linear-gradient(rgba(0,0,0,0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,0.07) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Off-white sections: soft warm-gray for visual rhythm */
+:root:not(.dark) .light-offwhite {
+  background-color: #f1f1f0;
+}
+
 /* ─── Scrollbar ──────────────────────────────────────────────────── */
 ::-webkit-scrollbar       { width: 5px; }
 ::-webkit-scrollbar-track { background: #f4f4f5; }

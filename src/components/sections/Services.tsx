@@ -19,7 +19,7 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="relative py-24 sm:py-32 bg-zinc-50 dark:bg-[#0d0d10] overflow-hidden"
+      className="relative py-24 sm:py-32 light-offwhite dark:bg-[#0d0d10] overflow-hidden"
       aria-labelledby="services-heading"
     >
       {/* Background accents */}

@@ -106,7 +106,7 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="relative py-24 sm:py-32 bg-white dark:bg-zinc-950 overflow-hidden"
+      className="relative py-24 sm:py-32 light-grid dark:bg-zinc-950 overflow-hidden"
       aria-labelledby="skills-heading"
     >
       {/* Background accent */}

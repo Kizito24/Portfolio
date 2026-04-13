@@ -54,7 +54,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative py-24 sm:py-32 bg-zinc-50 dark:bg-[#0d0d10] overflow-hidden"
+      className="relative py-24 sm:py-32 light-grid dark:bg-[#0d0d10] overflow-hidden"
       aria-labelledby="contact-heading"
     >
       {/* Background */}
