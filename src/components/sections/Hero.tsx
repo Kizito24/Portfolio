@@ -167,7 +167,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.05, duration: 0.7 }}
-          className="text-xs text-zinc-500 dark:text-zinc-500 tracking-wide"
+          className="text-xs text-zinc-500 dark:text-zinc-500 tracking-wide mb-28 sm:mb-0"
         >
           NDA-Ready · USD Invoicing · Remote Worldwide · 48hr Start
         </motion.p>
@@ -177,7 +177,7 @@ export default function Hero() {
       <motion.div
         animate={{ y: [0, 8, 0] }}
         transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 text-zinc-500 dark:text-zinc-700"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 text-zinc-500 dark:text-zinc-700 pt-2 sm:pt-0"
         aria-hidden="true"
       >
         <span className="text-[10px] uppercase tracking-[0.2em]">Scroll</span>
