@@ -239,7 +239,7 @@ export const experiences = [
 ];
 
 export const socialLinks = [
-  { label: 'GitHub',   href: 'https://github.com/Kizito24',        icon: 'github'   },
-  { label: 'LinkedIn', href: 'https://linkedin.com/in/kizitochiazor',   icon: 'linkedin' },
-  { label: 'Twitter',  href: 'https://twitter.com/kizito___',      icon: 'twitter'  },
+  { label: 'GitHub',   href: 'https://www.github.com/Kizito24',        icon: 'github'   },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/kizitochiazor',   icon: 'linkedin' },
+  { label: 'Twitter',  href: 'https://www.twitter.com/kizito___',      icon: 'twitter'  },
 ];

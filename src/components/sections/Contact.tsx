@@ -6,10 +6,10 @@ import { Mail, Send, CheckCircle2, CalendarDays, Clock, FileCheck, CreditCard, A
 import { GithubIcon, LinkedinIcon, TwitterIcon } from '@/components/ui/Icons';
 
 const socials = [
-  { icon: GithubIcon,   label: 'GitHub',   href: 'https://github.com/kizitoch',      color: 'hover:text-zinc-900 dark:hover:text-zinc-50' },
-  { icon: LinkedinIcon, label: 'LinkedIn', href: 'https://linkedin.com/in/kizitoch', color: 'hover:text-blue-500' },
-  { icon: TwitterIcon,  label: 'Twitter',  href: 'https://twitter.com/kizitoch',     color: 'hover:text-sky-400' },
-  { icon: Mail,         label: 'Email',    href: 'mailto:kizito@example.com',        color: 'hover:text-indigo-500 dark:hover:text-indigo-400' },
+  { icon: GithubIcon,   label: 'GitHub',   href: 'https://github.com/Kizito24',      color: 'hover:text-zinc-900 dark:hover:text-zinc-50' },
+  { icon: LinkedinIcon, label: 'LinkedIn', href: 'https://linkedin.com/in/kizitochiazor', color: 'hover:text-blue-500' },
+  { icon: TwitterIcon,  label: 'Twitter',  href: 'https://twitter.com/kizito___',     color: 'hover:text-sky-400' },
+  { icon: Mail,         label: 'Email',    href: 'mailto:kizitochiazor@gmail.com',        color: 'hover:text-indigo-500 dark:hover:text-indigo-400' },
 ];
 
 const processSteps = [
