@@ -8,15 +8,7 @@ import { projects } from '@/data';
 
 const categories = ['All', 'Web App', 'Platform', 'Cloud', 'Blockchain', 'Dev Tools', 'FinTech'];
 
-// Color swatches per category
-const categorySwatches: Record<string, string> = {
-  'Web App':    'from-blue-500/30 to-indigo-500/30',
-  'Platform':   'from-emerald-500/30 to-teal-500/30',
-  'Cloud':      'from-sky-500/30 to-blue-600/30',
-  'Blockchain': 'from-amber-500/30 to-orange-500/30',
-  'Dev Tools':  'from-violet-500/30 to-purple-500/30',
-  'FinTech':    'from-indigo-500/30 to-cyan-500/30',
-};
+
 
 const containerVariants: Variants = {
   hidden: {},
@@ -28,14 +20,7 @@ const cardVariants: Variants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: [0.25, 0.46, 0.45, 0.94] } },
 };
 
-function projectInitials(title: string) {
-  return title
-    .split(/\s+/)
-    .map((w) => w[0])
-    .join('')
-    .toUpperCase()
-    .slice(0, 3);
-}
+
 
 export default function Projects() {
   const [filter, setFilter] = useState('All');
@@ -118,23 +103,12 @@ export default function Projects() {
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
           >
             {filtered.map((project) => {
-              const swatch = categorySwatches[project.category] ?? 'from-indigo-500/30 to-violet-500/30';
               return (
                 <motion.article
                   key={project.title}
                   variants={cardVariants}
                   className="group relative flex flex-col rounded-2xl glass glass-hover border border-zinc-200 dark:border-zinc-800/60 overflow-hidden hover:border-indigo-400/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_48px_rgba(0,0,0,0.12)] dark:hover:shadow-[0_16px_48px_rgba(0,0,0,0.4)] will-change-transform"
                 >
-                  {/* Gradient swatch image area */}
-                  <div
-                    className={`relative h-[120px] w-full bg-gradient-to-br ${swatch} flex items-center justify-center shrink-0`}
-                    aria-hidden="true"
-                  >
-                    <span className="text-3xl font-black text-white/20 tracking-tight select-none">
-                      {projectInitials(project.title)}
-                    </span>
-                  </div>
-
                   <div className="flex flex-col flex-1 p-6">
                     {/* Header row */}
                     <div className="flex items-start justify-between mb-3">

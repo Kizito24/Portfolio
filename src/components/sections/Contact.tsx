@@ -127,7 +127,7 @@ export default function Contact() {
               </ul>
 
               <a
-                href="https://cal.com/kizitoch"
+                href="https://calendar.app.google/3QsYjt1hvu9w5iz37"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group w-full flex items-center justify-center gap-2 px-6 py-3.5 gradient-bg text-white font-semibold rounded-xl hover:opacity-90 transition-all duration-200 shadow-[0_0_20px_rgba(99,102,241,0.25)] hover:shadow-[0_0_32px_rgba(99,102,241,0.4)] text-sm"
