@@ -93,21 +93,26 @@ export default function About() {
                 aria-hidden="true"
               />
               {/* Photo */}
-              <div className="relative rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-700/60 shadow-2xl aspect-square">
+              <a
+                href="https://www.linkedin.com/in/kizitochiazor/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BCeW9G6iQTVSErMQkiyMiyw%3D%3D"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block relative rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-700/60 shadow-2xl aspect-square group/photo cursor-pointer"
+              >
                 <Image
-                  src="https://github.com/Kizito24.png"
+                  src="/avatar.jpg"
                   alt="Kizito Chiazor — FinTech Engineer & Cloud Architect"
                   width={400}
                   height={400}
                   sizes="(max-width: 768px) 100vw, 400px"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover/photo:scale-105"
                 />
                 <div
                   className="absolute bottom-0 left-0 right-0 h-1/3 pointer-events-none hidden dark:block"
                   style={{ background: 'linear-gradient(to top, rgba(9,9,11,0.65), transparent)' }}
                   aria-hidden="true"
                 />
-              </div>
+              </a>
 
               {/* Floating "open" badge */}
               <motion.div

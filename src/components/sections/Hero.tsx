@@ -7,6 +7,7 @@ import Link from 'next/link';
 
 const roles = [
   'FinTech Engineer',
+  'Blockchain Developer',
   'Cloud Engineer',
   'Full-Stack Developer',
   'Technical Advisor',

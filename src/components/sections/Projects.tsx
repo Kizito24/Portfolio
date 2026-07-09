@@ -219,7 +219,7 @@ export default function Projects() {
           className="text-center mt-14"
         >
           <a
-            href="https://github.com/kizitoch"
+            href="https://github.com/Kizito24"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 glass glass-hover border border-zinc-200 dark:border-zinc-800 text-zinc-700 dark:text-zinc-300 font-semibold rounded-xl hover:border-indigo-400/40 hover:text-zinc-900 dark:hover:text-white transition-all duration-200"

@@ -1,6 +1,7 @@
 export const navLinks = [
   { href: '#services', label: 'Services' },
   { href: '#projects', label: 'Work' },
+  { href: '#blog', label: 'Blog' },
   { href: '#about', label: 'About' },
   { href: '#experience', label: 'Journey' },
   { href: '#contact', label: 'Contact' },
@@ -126,15 +127,45 @@ export const services = [
       'Cloud infrastructure risk assessment',
       'Engineering team & process evaluation',
     ],
-    gradient: 'from-amber-500 to-orange-500',
+    gradient: 'from-rose-500 to-pink-500',
     startingFrom: '$4,000',
     cta: 'Request Assessment',
+    ctaHref: '#contact',
+    featured: false,
+  },
+  {
+    id: 'web3-infra',
+    eyebrow: 'Specialised',
+    title: 'Web3 Infrastructure Development',
+    subtitle: 'Hardened Node & Validator Operations',
+    description:
+      'Production-grade deployment, monitoring, and security auditing for Ethereum validators, RPC nodes, Web3Signer systems, and custom indexing middleware.',
+    deliverables: [
+      'Secure validator setups & remote key signing (Web3Signer/HSM)',
+      'High-availability load-balanced RPC node infrastructure',
+      'Custom blockchain indexing, data ingestion & caching layers',
+      'Real-time metrics, AlertManager rules & Grafana dashboards',
+    ],
+    gradient: 'from-amber-500 to-orange-500',
+    startingFrom: '$3,000',
+    cta: 'Discuss Web3 Infra',
     ctaHref: '#contact',
     featured: false,
   },
 ];
 
 export const projects = [
+  {
+    title: 'Validator Orchestrator',
+    description:
+      'Hardened and monitored infrastructure-as-code solution for deploying Ethereum validators and RPC nodes. Features slashing protection, remote key signing, and automated backups.',
+    impact: 'Hardened security · IaC deployment · Grafana dashboard',
+    tech: ['Terraform', 'Kubernetes', 'Docker', 'Prometheus', 'Grafana'],
+    github: 'https://github.com/Kizito24/validator-orchestrator',
+    live: '#',
+    featured: true,
+    category: 'Blockchain',
+  },
   {
     title: 'K Finance',
     description:
@@ -200,6 +231,42 @@ export const projects = [
     live: 'https://synergycon-ten.vercel.app',
     featured: false,
     category: 'Web',
+  },
+];
+
+export const blogPosts = [
+  {
+    slug: 'building-fintech-products-people-can-trust',
+    title: 'Building FinTech Products People Can Trust',
+    topic: 'FinTech Engineering',
+    date: 'May 2026',
+    readTime: '5 min read',
+    summary:
+      'A practical look at how reliable payment flows, clear transaction states, audit-friendly logging, and careful error handling help financial products earn user confidence.',
+    writeup:
+      'Trust is the ultimate metric in financial technology. While speed and features are important, a user\'s confidence in how a system handles their money is what determines long-term success. Over years of building payment gateways and financial services, I have learned that trust isn\'t just built in the marketing department—it is engineered directly into the codebase.\n\nAt the core of financial-grade engineering is transaction integrity. Every single transaction must be treated as a mission-critical operation. This means implementing database transactions that guarantee atomicity, consistency, isolation, and durability (ACID). If a transfer fails mid-way, the system must roll back completely, ensuring no money is lost in a black hole.\n\nTransparency is another key pillar. Users should never be left guessing what is happening to their funds. Providing clear, real-time transaction states (e.g., \'Pending\', \'Processing\', \'Settled\', \'Failed\') and communicating error states without jargon is essential. When a user understands why a payment failed, they feel in control.\n\nFinally, auditability and monitoring are non-negotiable. Detailed, structured log entries with high-integrity security trails allow you to trace any issue within seconds. When integrated with error tracking like Sentry and logging systems like Grafana Loki, you can detect and resolve friction points before the customer even notices them.',
+  },
+  {
+    slug: 'what-makes-a-portfolio-project-production-ready',
+    title: 'What Makes a Portfolio Project Production-Ready?',
+    topic: 'Software Craft',
+    date: 'April 2026',
+    readTime: '4 min read',
+    summary:
+      'A simple checklist for turning a demo into a serious engineering signal: clean architecture, meaningful documentation, testing, deployment, and observability.',
+    writeup:
+      'Many developers showcase projects that work perfectly on their local machine under ideal conditions. However, the difference between a prototype and a production-ready application lies in how it handles the unpredictable nature of the real world. A production-ready project demonstrates professional engineering judgement and attention to detail.\n\nFirst and foremost is error handling and resilience. A robust application expects failures—network timeouts, database disconnects, invalid user inputs—and handles them gracefully. This means implementing comprehensive try-catch blocks, returning helpful API error messages, and ensuring the UI remains usable even when services fail.\n\nSecondly, clean architecture and type safety are critical for maintainability. Using TypeScript, separating business logic from presentation, and structuring your project with clear boundaries makes it easy for other engineers to understand and contribute. Adding automated tests (unit, integration, and end-to-end) guarantees that your code remains correct as it evolves.\n\nLastly, deployment and observability complete the package. A production-ready project is deployed on reliable infrastructure with automated CI/CD pipelines. It should have basic monitoring, logging, and error tracking configured. When a hiring manager can review a clean repository, see automated test passes, and click a live URL that includes error tracking, they see an engineer who is ready to ship production code.',
+  },
+  {
+    slug: 'designing-cloud-systems-that-stay-maintainable',
+    title: 'Designing Cloud Systems That Stay Maintainable',
+    topic: 'Cloud & DevOps',
+    date: 'March 2026',
+    readTime: '6 min read',
+    summary:
+      'Notes on building cloud infrastructure that is understandable, repeatable, and ready to evolve without becoming expensive or fragile.',
+    writeup:
+      'Modern cloud infrastructure offers incredible power, but it also introduces significant complexity. Without a deliberate approach to design, cloud setups can quickly become a tangled web of manual configurations, undocumented dependencies, and runaway costs. Designing for maintainability is key to keeping engineering teams agile.\n\nThe foundation of maintainable cloud systems is Infrastructure as Code (IaC). Everything—from VPCs and security groups to database clusters and load balancers—should be defined in tools like Terraform or Ansible. This ensures that your environments are fully reproducible, documentable, and version-controlled. If disaster strikes, you can rebuild your entire stack in minutes.\n\nAnother important principle is client diversity and redundancy. In web3 and traditional setups alike, avoiding single points of failure keeps systems online. This means deploying across multiple availability zones and regions, using auto-scaling groups, and configuring health checks to automatically replace unhealthy nodes.\n\nMonitoring and cost-control go hand-in-hand with maintenance. Having centralized dashboards (using Prometheus and Grafana) allows you to track resource utilization, find bottlenecks, and optimize resource sizing. Establishing budget alerts and automatic cleanup rules for unused resources prevents surprising cloud bills, keeping the business viable and the infrastructure efficient.',
   },
 ];
 
