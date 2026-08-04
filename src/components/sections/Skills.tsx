@@ -20,9 +20,9 @@ interface CategoryCard {
 }
 
 function levelLabel(level: number): string {
-  if (level >= 90) return 'Expert';
-  if (level >= 75) return 'Advanced';
-  return 'Proficient';
+  if (level >= 90) return 'Core';
+  if (level >= 75) return 'Production use';
+  return 'Working knowledge';
 }
 
 const categories: CategoryCard[] = [
@@ -61,8 +61,8 @@ const categories: CategoryCard[] = [
 ];
 
 const extraTech = [
-  'Solidity', 'Figma', 'Linux', 'Bash', 'CI/CD',
-  'GitHub Actions', 'Nginx', 'AWS Lambda', 'CloudWatch', 'WebSockets',
+  'gRPC', 'Protocol Buffers', 'Plaid', 'Dwolla', 'Appwrite',
+  'Figma', 'Linux', 'Bash', 'CI/CD', 'GitHub Actions', 'WebSockets',
 ];
 
 function SkillBar({ name, level, delay = 0, dotColor }: Skill & { delay?: number; dotColor: string }) {
@@ -126,7 +126,7 @@ export default function Skills() {
           className="text-center mb-16"
         >
           <span className="text-xs font-bold uppercase tracking-[0.18em] text-indigo-500 dark:text-indigo-400 mb-2 block">
-            What I Know
+            What I Use
           </span>
           <h2
             id="skills-heading"
@@ -135,7 +135,7 @@ export default function Skills() {
             Skills &amp; Expertise
           </h2>
           <p className="text-zinc-500 dark:text-zinc-500 mt-4 max-w-xl mx-auto">
-            A curated set of technologies I use to craft exceptional digital products.
+            Technologies I have applied across production products, client delivery, and substantial engineering projects.
           </p>
         </motion.div>
 

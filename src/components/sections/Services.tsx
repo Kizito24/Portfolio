@@ -1,7 +1,7 @@
 'use client';
 
 import { motion, type Variants } from 'framer-motion';
-import { CheckCircle2, ChevronRight, CalendarDays } from 'lucide-react';
+import { BriefcaseBusiness, CheckCircle2, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
 import { services } from '@/data';
 
@@ -41,17 +41,16 @@ export default function Services() {
           className="text-center mb-16"
         >
           <span className="text-indigo-500 dark:text-indigo-400 text-sm font-semibold uppercase tracking-widest">
-            What I Offer
+            How I Contribute
           </span>
           <h2
             id="services-heading"
             className="text-3xl sm:text-5xl font-extrabold mt-3 text-zinc-900 dark:text-zinc-50"
           >
-            Specialised Services
+            What I Bring to a Team
           </h2>
           <p className="text-zinc-500 dark:text-zinc-500 mt-4 max-w-xl mx-auto leading-relaxed">
-            Focused solutions for high-stakes technical challenges — delivered to
-            fintech companies, hedge funds, and cloud-native organisations worldwide.
+            Practical engineering strengths demonstrated across shipped products—not a list of every tool I have tried.
           </p>
         </motion.div>
 
@@ -107,10 +106,10 @@ export default function Services() {
                       {svc.subtitle}
                     </p>
                   </div>
-                  {/* Starting price */}
-                  <div className="text-right shrink-0 ml-4">
-                    <div className="text-xs text-zinc-500 dark:text-zinc-500 mb-0.5">Starting from</div>
-                    <div className="text-lg font-extrabold gradient-text tabular-nums">{svc.startingFrom}</div>
+                  {/* Evidence stack */}
+                  <div className="hidden sm:block text-right shrink-0 ml-4 max-w-40">
+                    <div className="text-xs text-zinc-500 dark:text-zinc-500 mb-0.5">Core stack</div>
+                    <div className="text-sm font-extrabold gradient-text">{svc.proof}</div>
                   </div>
                 </div>
 
@@ -159,17 +158,17 @@ export default function Services() {
           className="mt-14 p-6 sm:p-8 rounded-2xl glass border border-indigo-500/20 dark:border-indigo-500/15 text-center"
         >
           <p className="text-zinc-700 dark:text-zinc-300 font-semibold text-lg mb-1">
-            Not sure which service fits your need?
+            Hiring for a product-minded software engineer?
           </p>
           <p className="text-zinc-500 dark:text-zinc-500 text-sm mb-5">
-            A free 30-minute discovery call — no pitch, no obligation. Just a frank conversation about your challenge.
+            I am open to full-time, contract, and project-based opportunities where I can own meaningful delivery.
           </p>
           <Link
             href="#contact"
             className="inline-flex items-center gap-2 px-6 py-3 gradient-bg text-white font-semibold rounded-xl hover:opacity-90 transition-opacity glow-indigo-sm text-sm"
           >
-            <CalendarDays size={15} />
-            Book Free Discovery Call
+            <BriefcaseBusiness size={15} />
+            Discuss an Opportunity
           </Link>
         </motion.div>
       </div>

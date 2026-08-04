@@ -1,37 +1,37 @@
 'use client';
 
 import { motion, type Variants } from 'framer-motion';
-import { BadgeCheck, Clock, DollarSign, Globe2 } from 'lucide-react';
+import { BadgeCheck, Clock, Code2, Globe2 } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
 const valueProps = [
   {
     icon: BadgeCheck,
-    title: 'Delivery you can bank on',
+    title: 'Production ownership',
     description:
-      'Clear milestones, documented code, and no ghost-after-payment situations. Every engagement ends with a handover you actually understand.',
+      'I take features from requirements and design through implementation, deployment, monitoring, and documentation.',
     gradient: 'from-blue-500 to-indigo-500',
   },
   {
     icon: Globe2,
-    title: 'Built for global scale',
+    title: 'Cross-functional delivery',
     description:
-      'I think beyond the local market. Architecture decisions, compliance readiness, and UX choices are made with international users in mind.',
+      'I collaborate with designers and product stakeholders, translate Figma into code, and communicate trade-offs clearly.',
     gradient: 'from-emerald-500 to-teal-500',
   },
   {
-    icon: DollarSign,
-    title: 'ROI-driven engineering',
+    icon: Code2,
+    title: 'Systems thinking',
     description:
-      'Features cost money and time. I help you invest both where they move the needle — not just what is technically interesting.',
+      'I work across interfaces, APIs, databases, integrations, and infrastructure instead of treating features in isolation.',
     gradient: 'from-amber-500 to-orange-500',
   },
   {
     icon: Clock,
-    title: 'Async-first communication',
+    title: 'Async communication',
     description:
-      'Time-zone agnostic. I work with US, UK, and EU clients without requiring overlap hours. Detailed updates, always in writing.',
+      'Clear written updates, documented decisions, and thoughtful handovers make collaboration work across locations and time zones.',
     gradient: 'from-violet-500 to-purple-500',
   },
 ];
@@ -94,14 +94,14 @@ export default function About() {
               />
               {/* Photo */}
               <a
-                href="https://www.linkedin.com/in/kizitochiazor/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BCeW9G6iQTVSErMQkiyMiyw%3D%3D"
+                href="https://www.linkedin.com/in/kizitochiazor"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block relative rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-700/60 shadow-2xl aspect-square group/photo cursor-pointer"
               >
                 <Image
                   src="/avatar.jpg"
-                  alt="Kizito Chiazor — FinTech Engineer & Cloud Architect"
+                  alt="Chinoyelum Kizito Chiazor — Full-Stack Software Engineer"
                   width={400}
                   height={400}
                   sizes="(max-width: 768px) 100vw, 400px"
@@ -121,7 +121,7 @@ export default function About() {
                 className="absolute -bottom-4 -right-4 glass border border-emerald-500/30 rounded-xl px-4 py-2 text-sm font-semibold text-emerald-600 dark:text-emerald-400 shadow-xl flex items-center gap-2"
               >
                 <BadgeCheck size={15} className="text-emerald-500 shrink-0" aria-hidden="true" />
-                Accepting USD contracts
+                Open to engineering roles
               </motion.div>
             </div>
 
@@ -134,14 +134,14 @@ export default function About() {
               className="mt-10 p-5 rounded-2xl glass border border-zinc-200 dark:border-zinc-800/60"
             >
               <p className="text-xs font-semibold uppercase tracking-widest text-zinc-500 dark:text-zinc-500 mb-3">
-                Currently accepting
+                Currently open to
               </p>
               <ul className="space-y-2">
                 {[
-                  'FinTech & trading system contracts',
-                  'Cloud architecture & infrastructure',
-                  'Full-stack project contracts',
-                  'Technical advisory (hourly / retainer)',
+                  'Full-time software engineering roles',
+                  'Contract and project-based opportunities',
+                  'Remote or hybrid product teams',
+                  'Open-source and technical collaboration',
                 ].map((item) => (
                   <li key={item} className="flex items-center gap-2 text-sm text-zinc-600 dark:text-zinc-400">
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 shrink-0" aria-hidden="true" />
@@ -149,18 +149,11 @@ export default function About() {
                   </li>
                 ))}
               </ul>
-              <div className="mt-4 pt-4 border-t border-zinc-200 dark:border-zinc-800 flex items-center justify-between">
-                <span className="text-xs text-zinc-500 dark:text-zinc-500">Invoicing currencies</span>
-                <div className="flex gap-1.5">
-                  {['USD', 'EUR', 'GBP'].map((c) => (
-                    <span
-                      key={c}
-                      className="px-2 py-0.5 text-xs font-semibold rounded-md bg-indigo-500/10 dark:bg-indigo-500/15 text-indigo-600 dark:text-indigo-400 border border-indigo-500/20"
-                    >
-                      {c}
-                    </span>
-                  ))}
-                </div>
+              <div className="mt-4 pt-4 border-t border-zinc-200 dark:border-zinc-800 flex items-center justify-between gap-4">
+                <span className="text-xs text-zinc-500 dark:text-zinc-500">Based in</span>
+                <span className="px-2.5 py-1 text-xs font-semibold rounded-md bg-indigo-500/10 dark:bg-indigo-500/15 text-indigo-600 dark:text-indigo-400 border border-indigo-500/20">
+                  Ibadan, Nigeria · Remote-ready
+                </span>
               </div>
             </motion.div>
           </motion.div>
@@ -173,47 +166,41 @@ export default function About() {
             transition={{ duration: 0.7, ease: 'easeOut', delay: 0.1 }}
           >
             <h3 className="text-2xl sm:text-3xl font-extrabold mb-6 text-zinc-900 dark:text-zinc-50 leading-snug">
-              The engineer clients come back to
+              A product-minded engineer who works across the stack
               <span className="gradient-text">.</span>
             </h3>
 
             <div className="space-y-4 text-zinc-600 dark:text-zinc-400 leading-relaxed mb-8">
               <p>
-                I&apos;m <strong className="text-zinc-900 dark:text-zinc-200">Kizito Chiazor</strong> — a software
-                engineer and cloud architect who has built financial tools, scaled platforms to thousands of users,
-                and founded a product company. I work with organisations that need{' '}
-                <strong className="text-zinc-900 dark:text-zinc-200">precision, not just effort.</strong>
+                I&apos;m <strong className="text-zinc-900 dark:text-zinc-200">Chinoyelum Kizito Chiazor</strong>, a
+                full-stack software engineer based in Ibadan, Nigeria. I build responsive product interfaces,
+                dependable APIs, and the cloud-backed systems that connect them.
               </p>
               <p>
-                My background spans the full engineering stack—from React frontends and cross-platform mobile apps
-                to FastAPI and Go backends, Terraform-managed infrastructure, and containerised services. I built and
-                scaled <strong className="text-zinc-900 dark:text-zinc-200">PlusPlusPlus</strong> to more than 2,000
-                active users and delivered the web and mobile product ecosystem behind{' '}
-                <strong className="text-zinc-900 dark:text-zinc-200">Yellomart</strong>.
+                My production work spans React, Next.js, TypeScript, React Native, Go, Python, PostgreSQL, and
+                MongoDB. I have delivered banking integrations with Plaid and Dwolla, Paystack payment flows,
+                microservices with gRPC, background processing, and applications used by thousands of people.
               </p>
               <p>
-                As CTO and Co-founder of{' '}
-                <strong className="text-zinc-900 dark:text-zinc-200">Community Lawyers and Yellomart</strong>, I have shipped
-                products under commercial pressure, managed engineering decisions against runway, and
-                learned how technology decisions directly impact business outcomes. That perspective shapes
-                every engagement I take on.
+                I&apos;m completing a B.Tech in Software Engineering at the Federal University of Technology,
+                Akure. Outside delivery work, I study system design and data-intensive applications and share
+                what I learn through technical writing and LinkedIn.
               </p>
             </div>
 
-            {/* Who I work with */}
+            {/* Roles I am targeting */}
             <div className="p-5 rounded-2xl glass border border-zinc-200 dark:border-zinc-800/60 mb-6">
               <p className="text-xs font-semibold uppercase tracking-widest text-zinc-500 dark:text-zinc-500 mb-3">
-                Who I work with
+                Best-fit opportunities
               </p>
               <div className="flex flex-wrap gap-2">
                 {[
-                  'Hedge Funds',
-                  'FinTech Startups',
-                  'Cloud-Native Teams',
-                  'SaaS Companies',
-                  'US / UK / EU Clients',
-                  'Venture-Backed Startups',
-                  'Individual Founders',
+                  'Full-Stack Engineer',
+                  'Backend Engineer',
+                  'Frontend Engineer',
+                  'Product Engineer',
+                  'React Native Engineer',
+                  'Cloud / Platform Engineer',
                 ].map((label) => (
                   <span
                     key={label}
@@ -226,10 +213,10 @@ export default function About() {
             </div>
 
             <Link
-              href="#contact"
+              href="#experience"
               className="inline-flex items-center gap-2 px-6 py-3 gradient-bg text-white font-semibold rounded-xl hover:opacity-90 transition-opacity text-sm glow-indigo-sm"
             >
-              Start a Conversation
+              View My Experience
               <span aria-hidden="true">→</span>
             </Link>
           </motion.div>

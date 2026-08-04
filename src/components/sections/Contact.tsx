@@ -2,7 +2,7 @@
 
 import { useState, FormEvent } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Send, CheckCircle2, CalendarDays, Clock, FileCheck, CreditCard, ArrowRight } from 'lucide-react';
+import { Mail, Send, CheckCircle2, CalendarDays, Clock, BriefcaseBusiness, MapPin, ArrowRight } from 'lucide-react';
 import { GithubIcon, LinkedinIcon, TwitterIcon } from '@/components/ui/Icons';
 
 const socials = [
@@ -13,41 +13,50 @@ const socials = [
 ];
 
 const processSteps = [
-  { step: '01', title: 'Discovery call', detail: '30 min · Free · No obligation' },
-  { step: '02', title: 'Tailored proposal', detail: 'Delivered within 48 hours' },
-  { step: '03', title: 'Project kickoff', detail: 'Starts within 1 week of sign-off' },
+  { step: '01', title: 'Initial conversation', detail: 'Role, team, product, or project goals' },
+  { step: '02', title: 'Technical discussion', detail: 'Architecture, delivery, and collaboration' },
+  { step: '03', title: 'Clear next step', detail: 'Interview, trial, or scoped engagement' },
 ];
 
 const contractDetails = [
-  { icon: CreditCard,  label: 'Payment',   value: 'USD · EUR · GBP · Crypto' },
-  { icon: FileCheck,   label: 'Contracts', value: 'Project-based or retainer · NDA on request' },
-  { icon: Clock,       label: 'Response',  value: 'Within 4 hours during business days' },
+  { icon: BriefcaseBusiness, label: 'Availability', value: 'Full-time · Contract · Project-based' },
+  { icon: MapPin, label: 'Location', value: 'Ibadan, Nigeria · Remote-ready' },
+  { icon: Clock, label: 'Response', value: 'Within one business day' },
 ];
 
-type FormState = { name: string; email: string; budget: string; message: string };
-type Status = 'idle' | 'sending' | 'sent';
+type FormState = { name: string; email: string; inquiry: string; message: string };
+type Status = 'idle' | 'sent';
 
-const budgetOptions = [
-  'Under $2,000',
-  '$2,000 – $5,000',
-  '$5,000 – $15,000',
-  '$15,000 – $50,000',
-  '$50,000+',
-  'Ongoing retainer',
+const inquiryOptions = [
+  'Full-time role',
+  'Contract role',
+  'Freelance project',
+  'Technical collaboration',
+  'Something else',
 ];
 
 export default function Contact() {
-  const [form, setForm] = useState<FormState>({ name: '', email: '', budget: '', message: '' });
+  const [form, setForm] = useState<FormState>({ name: '', email: '', inquiry: '', message: '' });
   const [status, setStatus] = useState<Status>('idle');
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
 
-  const handleSubmit = async (e: FormEvent) => {
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    setStatus('sending');
-    await new Promise((r) => setTimeout(r, 1200));
+    const subjectText = form.inquiry
+      ? form.inquiry + ' — portfolio enquiry from ' + form.name
+      : 'Portfolio enquiry from ' + form.name;
+    const subject = encodeURIComponent(subjectText);
+    const body = encodeURIComponent([
+      'Name: ' + form.name,
+      'Email: ' + form.email,
+      'Enquiry: ' + (form.inquiry || 'Not specified'),
+      '',
+      form.message,
+    ].join('\n'));
+    window.location.href = 'mailto:kizitochiazor@gmail.com?subject=' + subject + '&body=' + body;
     setStatus('sent');
   };
 
@@ -73,18 +82,17 @@ export default function Contact() {
           className="text-center mb-16"
         >
           <span className="text-xs font-bold uppercase tracking-[0.18em] text-indigo-500 dark:text-indigo-400 mb-2 block">
-            Work With Me
+            Let&apos;s Connect
           </span>
           <h2
             id="contact-heading"
             className="text-3xl sm:text-5xl font-extrabold mt-3 text-zinc-900 dark:text-zinc-50 leading-[1.1]"
           >
-            Ready to{' '}
-            <span className="gradient-text">Start a Project?</span>
+            Open to{' '}
+            <span className="gradient-text">Engineering Opportunities</span>
           </h2>
           <p className="text-zinc-500 dark:text-zinc-500 mt-4 max-w-xl mx-auto leading-relaxed">
-            I work with fintech companies, hedge funds, and cloud-native organisations globally.
-            Book a call or drop a message — let&apos;s see if we&apos;re a fit.
+            Hiring for a software engineer or need a product delivered? Send an email or schedule a conversation.
           </p>
         </motion.div>
 
@@ -105,19 +113,19 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="text-lg font-extrabold text-zinc-900 dark:text-zinc-50">
-                    Free 30-min Discovery Call
+                    Schedule a Conversation
                   </h3>
                   <p className="text-sm text-zinc-500 dark:text-zinc-500">
-                    No pitch. No obligation. Just a frank conversation about your challenge.
+                    A focused 30-minute conversation about the role, team, product, or technical challenge.
                   </p>
                 </div>
               </div>
 
               <ul className="space-y-2 mb-6">
                 {[
-                  'Walk me through your challenge or opportunity',
-                  'Get honest technical advice, immediately',
-                  'Leave with a clear path forward — whatever you decide',
+                  'Discuss the role, team, or product context',
+                  'Compare technical needs with relevant experience',
+                  'Agree on a clear interview or project next step',
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-2 text-sm text-zinc-600 dark:text-zinc-400">
                     <CheckCircle2 size={14} className="text-emerald-500 mt-0.5 shrink-0" aria-hidden="true" />
@@ -133,7 +141,7 @@ export default function Contact() {
                 className="group w-full flex items-center justify-center gap-2 px-6 py-3.5 gradient-bg text-white font-semibold rounded-xl hover:opacity-90 transition-all duration-200 shadow-[0_0_20px_rgba(99,102,241,0.25)] hover:shadow-[0_0_32px_rgba(99,102,241,0.4)] text-sm"
               >
                 <CalendarDays size={16} />
-                Book a Free Call
+                Schedule a Call
                 <ArrowRight size={15} className="group-hover:translate-x-0.5 transition-transform" />
               </a>
             </div>
@@ -142,7 +150,7 @@ export default function Contact() {
             <div className="p-5 rounded-2xl glass border border-zinc-200 dark:border-zinc-800/60">
               {/* Process steps */}
               <p className="text-xs font-bold uppercase tracking-[0.18em] text-zinc-500 dark:text-zinc-500 mb-4">
-                How it works
+                Conversation flow
               </p>
               <div className="space-y-4">
                 {processSteps.map(({ step, title, detail }) => (
@@ -163,7 +171,7 @@ export default function Contact() {
 
               {/* Engagement details */}
               <p className="text-xs font-bold uppercase tracking-[0.18em] text-zinc-500 dark:text-zinc-500 mb-4">
-                Engagement details
+                Practical details
               </p>
               <div className="space-y-3">
                 {contractDetails.map(({ icon: Icon, label, value }) => (
@@ -209,7 +217,7 @@ export default function Contact() {
             transition={{ duration: 0.65, ease: 'easeOut', delay: 0.1 }}
           >
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-zinc-500 dark:text-zinc-500 mb-4">
-              Or send a message
+              Send an email
             </p>
 
             {status === 'sent' ? (
@@ -219,21 +227,20 @@ export default function Contact() {
                 className="flex flex-col items-center justify-center gap-4 py-16 px-6 rounded-2xl bg-white dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800/60 text-center"
               >
                 <CheckCircle2 size={48} className="text-emerald-400" />
-                <h3 className="text-xl font-bold text-zinc-900 dark:text-zinc-50">Message received.</h3>
+                <h3 className="text-xl font-bold text-zinc-900 dark:text-zinc-50">Email draft opened.</h3>
                 <p className="text-zinc-500 dark:text-zinc-500 max-w-xs">
-                  I&apos;ll review your project details and respond within 4 hours.
+                  Review the pre-filled message in your email app, then send it when you are ready.
                 </p>
                 <button
-                  onClick={() => { setStatus('idle'); setForm({ name: '', email: '', budget: '', message: '' }); }}
+                  onClick={() => { setStatus('idle'); setForm({ name: '', email: '', inquiry: '', message: '' }); }}
                   className="mt-2 px-5 py-2 text-sm font-semibold gradient-bg text-white rounded-lg hover:opacity-90 transition-opacity cursor-pointer"
                 >
-                  Send Another
+                  Create Another Draft
                 </button>
               </motion.div>
             ) : (
               <form
                 onSubmit={handleSubmit}
-                noValidate
                 className="rounded-2xl bg-white dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800/60 p-6 sm:p-8 space-y-5"
                 aria-label="Contact form"
               >
@@ -261,19 +268,19 @@ export default function Contact() {
                   </div>
                 </div>
 
-                {/* Budget */}
+                {/* Enquiry type */}
                 <div>
-                  <label htmlFor="budget" className="block text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-1.5">
-                    Project Budget <span className="text-zinc-500 dark:text-zinc-500 font-normal">(USD)</span>
+                  <label htmlFor="inquiry" className="block text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-1.5">
+                    What are you reaching out about?
                   </label>
                   <select
-                    id="budget" name="budget"
-                    value={form.budget} onChange={handleChange}
+                    id="inquiry" name="inquiry" required
+                    value={form.inquiry} onChange={handleChange}
                     className="w-full px-4 py-3 rounded-xl bg-zinc-50 dark:bg-zinc-800/60 border border-zinc-200 dark:border-zinc-700/60 text-zinc-900 dark:text-zinc-50 focus:outline-none focus:border-indigo-400 dark:focus:border-indigo-500 transition-colors text-sm cursor-pointer"
                   >
-                    <option value="">Select a budget range</option>
-                    {budgetOptions.map((o) => (
-                      <option key={o} value={o}>{o}</option>
+                    <option value="">Select an option</option>
+                    {inquiryOptions.map((option) => (
+                      <option key={option} value={option}>{option}</option>
                     ))}
                   </select>
                 </div>
@@ -281,12 +288,12 @@ export default function Contact() {
                 {/* Message */}
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-1.5">
-                    Project Details
+                    Message
                   </label>
                   <textarea
                     id="message" name="message" required rows={5}
                     value={form.message} onChange={handleChange}
-                    placeholder="Describe your project, current tech stack, timeline, and what success looks like for you..."
+                    placeholder="Tell me about the role, team, product, or problem you are working on..."
                     className="w-full px-4 py-3 rounded-xl bg-zinc-50 dark:bg-zinc-800/60 border border-zinc-200 dark:border-zinc-700/60 text-zinc-900 dark:text-zinc-50 placeholder-zinc-400 dark:placeholder-zinc-600 focus:outline-none focus:border-indigo-400 dark:focus:border-indigo-500 transition-colors text-sm resize-none"
                   />
                 </div>
@@ -294,28 +301,15 @@ export default function Contact() {
                 {/* Submit */}
                 <motion.button
                   type="submit"
-                  disabled={status === 'sending'}
                   whileTap={{ scale: 0.97 }}
-                  className="w-full flex items-center justify-center gap-2 px-6 py-3.5 gradient-bg text-white font-semibold rounded-xl hover:opacity-90 disabled:opacity-60 transition-all duration-200 shadow-[0_0_20px_rgba(99,102,241,0.25)] hover:shadow-[0_0_32px_rgba(99,102,241,0.4)] cursor-pointer text-sm"
+                  className="w-full flex items-center justify-center gap-2 px-6 py-3.5 gradient-bg text-white font-semibold rounded-xl hover:opacity-90 transition-all duration-200 shadow-[0_0_20px_rgba(99,102,241,0.25)] hover:shadow-[0_0_32px_rgba(99,102,241,0.4)] cursor-pointer text-sm"
                 >
-                  {status === 'sending' ? (
-                    <>
-                      <svg className="animate-spin h-4 w-4" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
-                      </svg>
-                      Sending...
-                    </>
-                  ) : (
-                    <>
-                      <Send size={15} />
-                      Send Project Brief
-                    </>
-                  )}
+                  <Send size={15} />
+                  Open Email Draft
                 </motion.button>
 
                 <p className="text-center text-xs text-zinc-500 dark:text-zinc-500">
-                  Typical response: within 4 hours · NDA available on request
+                  Opens your email app · Typical response within one business day
                 </p>
 
                 {/* Socials below form on mobile */}

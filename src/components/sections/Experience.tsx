@@ -27,16 +27,16 @@ export default function Experience() {
           className="text-center mb-20"
         >
           <span className="text-indigo-500 dark:text-indigo-400 text-sm font-semibold uppercase tracking-widest">
-            My Journey
+            Professional Background
           </span>
           <h2
             id="experience-heading"
             className="text-3xl sm:text-5xl font-extrabold mt-3 text-zinc-900 dark:text-zinc-50"
           >
-            Experience & Growth
+            Experience & Education
           </h2>
           <p className="text-zinc-500 dark:text-zinc-500 mt-4 max-w-lg mx-auto">
-            From writing my first line of code to founding a startup — here&apos;s the journey so far.
+            Production roles, independent delivery, product ownership, and the education behind my engineering foundation.
           </p>
         </motion.div>
 

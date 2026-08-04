@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowDown, ChevronRight, Download, CalendarDays } from 'lucide-react';
+import { ArrowDown, BriefcaseBusiness, ChevronRight, Download } from 'lucide-react';
 import Link from 'next/link';
 
 const roles = [
@@ -10,7 +10,7 @@ const roles = [
   'Backend & Cloud Engineer',
   'Mobile App Developer',
   'FinTech Systems Builder',
-  'Technical Founder',
+  'Go & Python Backend Engineer',
 ];
 
 const stats = [
@@ -59,7 +59,7 @@ export default function Hero() {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
             <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
           </span>
-          Accepting new contracts<span className="hidden sm:inline"> — USD · Remote · Worldwide</span>
+          Open to software engineering roles<span className="hidden sm:inline"> — Remote · Hybrid · Nigeria</span>
           <ChevronRight size={14} className="shrink-0" />
         </motion.div>
 
@@ -101,9 +101,9 @@ export default function Hero() {
           transition={{ delay: 0.5, duration: 0.7 }}
           className="text-zinc-500 dark:text-zinc-500 text-base sm:text-lg max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          I design and ship{' '}
-          <span className="text-zinc-700 dark:text-zinc-300 font-semibold">full-stack digital products</span>
-          {' '}across web, mobile, backend, and cloud—from payments and marketplaces to weather intelligence and exam preparation.
+          Full-stack software engineer building{' '}
+          <span className="text-zinc-700 dark:text-zinc-300 font-semibold">production web, mobile, and backend products</span>
+          {' '}with React, Next.js, TypeScript, Go, and Python.
         </motion.p>
 
         {/* Primary CTAs — 2 buttons only */}
@@ -115,11 +115,11 @@ export default function Hero() {
         >
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
-              href="#contact"
+              href="#experience"
               className="group inline-flex items-center gap-2 px-7 py-3.5 gradient-bg text-white font-semibold rounded-xl hover:opacity-95 active:scale-95 transition-all duration-200 shadow-[0_0_20px_rgba(99,102,241,0.25)] hover:shadow-[0_0_32px_rgba(99,102,241,0.4)] text-sm sm:text-base"
             >
-              <CalendarDays size={16} />
-              Book a Discovery Call
+              <BriefcaseBusiness size={16} />
+              View Experience
             </Link>
             <Link
               href="#projects"
