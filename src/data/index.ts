@@ -13,10 +13,12 @@ export const skills = {
     { name: 'Next.js', level: 85 },
     { name: 'TypeScript', level: 80 },
     { name: 'Tailwind CSS', level: 90 },
+    { name: 'React Native / Expo', level: 80 },
     { name: 'HTML / CSS', level: 95 },
   ],
   backend: [
     { name: 'Python', level: 88 },
+    { name: 'FastAPI', level: 85 },
     { name: 'Flask', level: 82 },
     { name: 'Go', level: 72 },
     { name: 'Node.js', level: 75 },
@@ -25,13 +27,14 @@ export const skills = {
   database: [
     { name: 'MongoDB', level: 80 },
     { name: 'PostgreSQL', level: 75 },
+    { name: 'SQLite', level: 80 },
     { name: 'MySQL', level: 72 },
     { name: 'Redis', level: 55 },
   ],
   other: [
     { name: 'AWS / Cloud', level: 84 },
     { name: 'Terraform', level: 76 },
-    { name: 'Kubernetes', level: 72 },
+    { name: 'Tauri', level: 78 },
     { name: 'Docker', level: 82 },
     { name: 'Git', level: 92 },
   ],
@@ -154,83 +157,155 @@ export const services = [
   },
 ];
 
-export const projects = [
+export interface Project {
+  title: string;
+  description: string;
+  impact: string;
+  tech: string[];
+  github?: string;
+  secondarySource?: { label: string; href: string };
+  live?: string;
+  featured: boolean;
+  category: 'Product' | 'Mobile' | 'Backend' | 'Infrastructure' | 'Web';
+  visibility: 'Public source' | 'Private client work' | 'Private product';
+}
+
+export const projects: Project[] = [
+  {
+    title: 'PlusPlusPlus',
+    description:
+      'Exam-preparation platform for WAEC and JAMB students, with CBT simulations, structured question banks, secure accounts, and a responsive learning experience.',
+    impact: '2,000+ active users · ₦1M+ processed · Exam prep platform',
+    tech: ['Python', 'Flask', 'MongoDB', 'Bootstrap'],
+    github: 'https://github.com/Kizito24/plusplusplus',
+    featured: true,
+    category: 'Product',
+    visibility: 'Public source',
+  },
+  {
+    title: 'YellowMart Marketplace',
+    description:
+      'Full-stack local marketplace connecting merchants with nearby buyers. I built the storefront and API workflows for onboarding, subscriptions, listings, payments, analytics, and real-time messaging.',
+    impact: 'Live marketplace · Paystack billing · Web and mobile ecosystem',
+    tech: ['React', 'FastAPI', 'PostgreSQL', 'Redis', 'Celery', 'Paystack'],
+    live: 'https://yellomart.net',
+    featured: true,
+    category: 'Product',
+    visibility: 'Private client work',
+  },
+  {
+    title: 'WeatherOps',
+    description:
+      'Event-driven weather intelligence platform that monitors locations, evaluates custom rules, and sends automated SMS, email, or webhook alerts. It also supports satellite-based crop and tree analysis.',
+    impact: '24/7 monitoring · Multi-channel alerts · Satellite analysis',
+    tech: ['React', 'FastAPI', 'PostgreSQL', 'Redis', 'Celery', 'Playwright'],
+    github: 'https://github.com/Kizito24/weatherops-frontend',
+    secondarySource: {
+      label: 'API source',
+      href: 'https://github.com/Kizito24/weatherops-backend',
+    },
+    live: 'https://weatherops-ai.vercel.app',
+    featured: true,
+    category: 'Product',
+    visibility: 'Public source',
+  },
   {
     title: 'Validator Orchestrator',
     description:
-      'Hardened and monitored infrastructure-as-code solution for deploying Ethereum validators and RPC nodes. Features slashing protection, remote key signing, and automated backups.',
-    impact: 'Hardened security · IaC deployment · Grafana dashboard',
+      'Production-oriented infrastructure for deploying and operating Ethereum validators and RPC nodes, including OS hardening, remote key signing, slashing protection, observability, and disaster recovery.',
+    impact: 'Hardened nodes · IaC deployment · Full observability',
     tech: ['Terraform', 'Kubernetes', 'Docker', 'Prometheus', 'Grafana'],
     github: 'https://github.com/Kizito24/validator-orchestrator',
-    live: '#',
     featured: true,
-    category: 'Blockchain',
+    category: 'Infrastructure',
+    visibility: 'Public source',
   },
   {
     title: 'K Finance',
     description:
-      'Personal finance web application built with Next.js and TypeScript. Features real-time financial tracking with Sentry error monitoring for production reliability.',
-    impact: 'Live on Vercel · 29 commits · Production monitoring',
+      'Personal-finance web application for tracking money in one focused interface, built with a typed Next.js stack and production error monitoring.',
+    impact: 'Live on Vercel · Typed frontend · Sentry monitoring',
     tech: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Sentry'],
     github: 'https://github.com/Kizito24/k_finance',
     live: 'https://k-finance-one.vercel.app',
     featured: true,
-    category: 'FinTech',
+    category: 'Product',
+    visibility: 'Public source',
   },
   {
-    title: 'PlusPlusPlus',
+    title: 'YellowMart Mobile',
     description:
-      'Quiz platform that gamifies learning with session-based authentication, dynamic question banks, and categorised content. Built with Flask, MongoDB, and Bootstrap for a responsive UI.',
-    impact: '15 commits · Full auth system · MongoDB backend',
-    tech: ['Python', 'Flask', 'MongoDB', 'Bootstrap'],
-    github: 'https://github.com/Kizito24/plusplusplus',
-    live: '#',
+      'Cross-platform mobile companion for the YellowMart marketplace, covering merchant onboarding, product discovery, unified registration, and instant messaging against the same FastAPI platform.',
+    impact: 'iOS and Android · Shared marketplace API · Native navigation',
+    tech: ['React Native', 'Expo', 'TypeScript', 'NativeWind'],
     featured: true,
-    category: 'Web App',
+    category: 'Mobile',
+    visibility: 'Private client work',
+  },
+  {
+    title: 'MyDonation Backend',
+    description:
+      'Go API for a faith-driven donation platform that connects donors with verified projects, with cloud-backed media delivery, session caching, structured logging, and production error tracking.',
+    impact: 'Go REST API · Containerised delivery · Cloud media pipeline',
+    tech: ['Go', 'Gin', 'GORM', 'PostgreSQL', 'Redis', 'AWS S3', 'Sentry'],
+    featured: false,
+    category: 'Backend',
+    visibility: 'Private client work',
+  },
+  {
+    title: 'Sundries & Allied Bakeries',
+    description:
+      'Customer ordering experience for a bakery network, spanning a focused marketing site and a cross-platform mobile app built from a shared visual system.',
+    impact: 'Custom design system · Marketing site · Mobile ordering MVP',
+    tech: ['Next.js', 'React Native', 'Expo', 'Tailwind CSS'],
+    featured: false,
+    category: 'Mobile',
+    visibility: 'Private client work',
   },
   {
     title: 'Uber Clone',
     description:
-      'Cross-platform mobile ride-hailing app built with Expo and React Native. Uses file-based routing, NativeWind for styling, and centralised state management.',
-    impact: '17 commits · iOS & Android · TypeScript throughout',
+      'Cross-platform mobile ride-hailing app built with Expo and React Native, using file-based routing, NativeWind styling, and centralised state management.',
+    impact: '17 commits · iOS and Android · TypeScript throughout',
     tech: ['React Native', 'Expo', 'TypeScript', 'NativeWind'],
     github: 'https://github.com/Kizito24/uber-clone_vsc',
-    live: '#',
     featured: false,
     category: 'Mobile',
+    visibility: 'Public source',
   },
   {
     title: 'Go E-Commerce',
     description:
-      'Microservices e-commerce backend written in Go. Uses a monorepo workspace structure with Docker Compose for containerised service orchestration.',
-    impact: 'Containerised · Go workspace monorepo · Docker',
+      'Microservices e-commerce backend written in Go, organised as a workspace monorepo with Docker Compose for local, containerised service orchestration.',
+    impact: 'Containerised · Go workspace monorepo · Docker Compose',
     tech: ['Go', 'Docker', 'Microservices'],
     github: 'https://github.com/Kizito24/go-ecommerce',
-    live: '#',
     featured: false,
     category: 'Backend',
+    visibility: 'Public source',
   },
   {
     title: 'Number Facts API',
     description:
-      'REST API that classifies numbers by mathematical properties — prime, perfect, Armstrong, odd/even — and enriches responses with fun facts from the Numbers API.',
-    impact: 'Deployed on Render · CORS-enabled · Production WSGI',
+      'REST API that classifies numbers by mathematical properties—prime, perfect, Armstrong, odd or even—and enriches responses with facts from an external API.',
+    impact: 'Deployed API · CORS enabled · Production WSGI',
     tech: ['Python', 'Flask', 'Gunicorn', 'Render'],
     github: 'https://github.com/Kizito24/hngx-stage1-number-facts-api',
-    live: '#',
     featured: false,
-    category: 'API',
+    category: 'Backend',
+    visibility: 'Public source',
   },
   {
     title: 'Synergycon',
     description:
-      'Conference website for Synergycon featuring speaker listings, panelist profiles, special guest highlights, a team page, and an event gallery.',
-    impact: 'Live on Vercel · 21 commits · Multi-page site',
+      'Multi-page conference website featuring speaker and panellist profiles, special guests, the organising team, and an event gallery.',
+    impact: 'Live on Vercel · 21 commits · Multi-page experience',
     tech: ['HTML', 'CSS', 'JavaScript'],
     github: 'https://github.com/Kizito24/Synergycon',
     live: 'https://synergycon-ten.vercel.app',
     featured: false,
     category: 'Web',
+    visibility: 'Public source',
   },
 ];
 
@@ -272,20 +347,12 @@ export const blogPosts = [
 
 export const experiences = [
   {
-    year: '2024 — Present',
-    role: 'Founder & Lead Engineer',
-    company: 'Campus Nest',
+    year: '2021 — Present',
+    role: 'Software Engineering Student',
+    company: 'University',
     description:
-      'Building a student housing marketplace solving the accommodation crisis for university students across Africa. Leading full-stack engineering, product strategy, and investor conversations.',
-    tags: ['Next.js', 'Python', 'PostgreSQL', 'Founder'],
-  },
-  {
-    year: '2023 — 2024',
-    role: 'Freelance Software Engineer',
-    company: 'Independent (Global Clients)',
-    description:
-      'Delivered production web applications for clients in Nigeria, the UK, and the US. Specialised in React/Next.js frontends and Python REST APIs. Maintained 100% client satisfaction across all engagements.',
-    tags: ['React', 'Flask', 'MongoDB', 'USD Contracts'],
+      'Pursuing BSc Software Engineering with a focus on algorithms, cloud infrastructure, and distributed systems. Active in national hackathons, open-source projects, and campus tech leadership.',
+    tags: ['Algorithms', 'Cloud', 'Research', 'Open Source'],
   },
   {
     year: '2023',
@@ -296,12 +363,36 @@ export const experiences = [
     tags: ['AWS', 'Terraform', 'Docker', 'CI/CD'],
   },
   {
-    year: '2021 — Present',
-    role: 'Software Engineering Student',
-    company: 'University',
+    year: '2023 — 2026',
+    role: 'Lead Contract Engineer',
+    company: 'Independent (Global & Local Clients)',
     description:
-      'Pursuing BSc Software Engineering with a focus on algorithms, cloud infrastructure, and distributed systems. Active in national hackathons, open-source projects, and campus tech leadership.',
-    tags: ['Algorithms', 'Cloud', 'Research', 'Open Source'],
+      'Architected and shipped production applications for international and Nigerian organizations. Notable work includes WeatherOps (intelligent weather monitoring and satellite crop analysis) and MyDonation (Go/Gin charity backend).',
+    tags: ['React', 'FastAPI', 'Go', 'AWS', 'Contract'],
+  },
+  {
+    year: '2024 — 2025',
+    role: 'Creator & Lead Engineer',
+    company: 'PlusPlusPlus (PPP)',
+    description:
+      'Designed, launched, and scaled an advanced exam preparation platform for Nigerian students to 2,000+ active users. Engineered a cross-platform desktop client using Tauri/React, an interactive Google Gemini-powered AI tutor, and secure Paystack payment flows with automatic PIN distribution.',
+    tags: ['React', 'Tauri', 'Node.js', 'Gemini AI', 'Product'],
+  },
+  {
+    year: '2024 — Present',
+    role: 'Founder & Lead Engineer',
+    company: 'Campus Nest',
+    description:
+      'Building a student housing marketplace solving the accommodation crisis for university students across Africa. Leading full-stack engineering, product strategy, and investor conversations.',
+    tags: ['Next.js', 'Python', 'PostgreSQL', 'Founder'],
+  },
+  {
+    year: '2026 — Present',
+    role: 'Lead Software Engineer (Contract)',
+    company: 'Buckslaw Technology Limited',
+    description:
+      'Leading engineering efforts to design, build, and deliver three core products: yellomart.net (hyper-local e-commerce marketplace), Community Lawyers (AI-driven legal assistant and case filing platform), and Dlawnet. Architecting full-stack web, mobile, and Go/FastAPI backend layers.',
+    tags: ['FastAPI', 'Go', 'React Native', 'PostgreSQL', 'Contract'],
   },
 ];
 

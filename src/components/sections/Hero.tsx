@@ -6,17 +6,17 @@ import { ArrowDown, ChevronRight, Download, CalendarDays } from 'lucide-react';
 import Link from 'next/link';
 
 const roles = [
-  'FinTech Engineer',
-  'Blockchain Developer',
-  'Cloud Engineer',
-  'Full-Stack Developer',
-  'Technical Advisor',
+  'Full-Stack Product Engineer',
+  'Backend & Cloud Engineer',
+  'Mobile App Developer',
+  'FinTech Systems Builder',
+  'Technical Founder',
 ];
 
 const stats = [
-  { value: '$200K+', label: 'Client Value Delivered' },
-  { value: '3', label: 'Continents Served' },
-  { value: '99.9%', label: 'Uptime Delivered' },
+  { value: '2,000+', label: 'Product Users' },
+  { value: '12', label: 'Major Builds' },
+  { value: '4', label: 'Delivery Surfaces' },
 ];
 
 export default function Hero() {
@@ -101,11 +101,9 @@ export default function Hero() {
           transition={{ delay: 0.5, duration: 0.7 }}
           className="text-zinc-500 dark:text-zinc-500 text-base sm:text-lg max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          I build{' '}
-          <span className="text-zinc-700 dark:text-zinc-300 font-semibold">financial-grade software systems</span>
-          {' '}and ship cloud infrastructure that scales without surprises.
-          Trusted by startups and enterprises across{' '}
-          <span className="text-zinc-700 dark:text-zinc-300 font-semibold">3 continents.</span>
+          I design and ship{' '}
+          <span className="text-zinc-700 dark:text-zinc-300 font-semibold">full-stack digital products</span>
+          {' '}across web, mobile, backend, and cloud—from payments and marketplaces to weather intelligence and exam preparation.
         </motion.p>
 
         {/* Primary CTAs — 2 buttons only */}
@@ -124,10 +122,10 @@ export default function Hero() {
               Book a Discovery Call
             </Link>
             <Link
-              href="#services"
+              href="#projects"
               className="relative inline-flex items-center gap-2 px-7 py-3.5 glass glass-hover text-zinc-700 dark:text-zinc-300 font-semibold rounded-xl border border-zinc-300 dark:border-zinc-700/60 hover:border-indigo-400/50 hover:text-zinc-900 dark:hover:text-white transition-all duration-200 text-sm sm:text-base overflow-hidden group"
             >
-              View Services
+              Explore My Work
               <ChevronRight size={15} className="group-hover:translate-x-0.5 transition-transform duration-200" />
               <span className="absolute bottom-0 left-0 h-px w-0 bg-indigo-400 group-hover:w-full transition-all duration-200 ease-out origin-left" aria-hidden="true" />
             </Link>

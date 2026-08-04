@@ -180,21 +180,21 @@ export default function About() {
             <div className="space-y-4 text-zinc-600 dark:text-zinc-400 leading-relaxed mb-8">
               <p>
                 I&apos;m <strong className="text-zinc-900 dark:text-zinc-200">Kizito Chiazor</strong> — a software
-                engineer and cloud architect who has built financial tools, shipped production infrastructure,
-                and founded a venture-backed startup. I work with organisations that need{' '}
+                engineer and cloud architect who has built financial tools, scaled platforms to thousands of users,
+                and founded a product company. I work with organisations that need{' '}
                 <strong className="text-zinc-900 dark:text-zinc-200">precision, not just effort.</strong>
               </p>
               <p>
-                My background spans the full engineering stack — from pixel-perfect React frontends to
-                low-latency Python APIs, Terraform-managed AWS environments, and containerised microservices.
-                Clients in fintech trust me because I understand that a bug in a trading system isn&apos;t
-                a bug — it&apos;s a{' '}
-                <strong className="text-zinc-900 dark:text-zinc-200">financial liability.</strong>
+                My background spans the full engineering stack—from React frontends and cross-platform mobile apps
+                to FastAPI and Go backends, Terraform-managed infrastructure, and containerised services. I built and
+                scaled <strong className="text-zinc-900 dark:text-zinc-200">PlusPlusPlus</strong> to more than 2,000
+                active users and delivered the web and mobile product ecosystem behind{' '}
+                <strong className="text-zinc-900 dark:text-zinc-200">Yellomart</strong>.
               </p>
               <p>
-                As founder of{' '}
-                <strong className="text-zinc-900 dark:text-zinc-200">Campus Nest</strong>, I have shipped
-                a product under commercial pressure, managed engineering decisions against runway, and
+                As CTO and Co-founder of{' '}
+                <strong className="text-zinc-900 dark:text-zinc-200">Community Lawyers and Yellomart</strong>, I have shipped
+                products under commercial pressure, managed engineering decisions against runway, and
                 learned how technology decisions directly impact business outcomes. That perspective shapes
                 every engagement I take on.
               </p>

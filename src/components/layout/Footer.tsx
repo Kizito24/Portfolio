@@ -6,9 +6,9 @@ import { GithubIcon, LinkedinIcon, TwitterIcon } from '@/components/ui/Icons';
 import { navLinks } from '@/data';
 
 const socials = [
-  { icon: GithubIcon,   href: 'https://github.com/kizitoch',     label: 'GitHub' },
-  { icon: LinkedinIcon, href: 'https://linkedin.com/in/kizitoch', label: 'LinkedIn' },
-  { icon: TwitterIcon,  href: 'https://twitter.com/kizitoch',     label: 'Twitter' },
+  { icon: GithubIcon,   href: 'https://github.com/Kizito24',     label: 'GitHub' },
+  { icon: LinkedinIcon, href: 'https://linkedin.com/in/kizitochiazor', label: 'LinkedIn' },
+  { icon: TwitterIcon,  href: 'https://twitter.com/kizito___',     label: 'Twitter' },
 ];
 
 export default function Footer() {

@@ -11,9 +11,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Kizito Chiazor — Software Engineer & Founder',
+  title: 'Kizito Chiazor — Full-Stack Product Engineer',
   description:
-    'Software Engineer, Cloud Architect, and Entrepreneur building global digital solutions. Specializing in React, Next.js, Python, AWS, and modern web technologies.',
+    'Portfolio of Kizito Chiazor, a full-stack product engineer building web, mobile, backend, cloud, fintech, and infrastructure systems.',
   keywords: [
     'software engineer',
     'developer',
@@ -22,23 +22,24 @@ export const metadata: Metadata = {
     'Next.js',
     'Python',
     'portfolio',
-    'founder',
-    'entrepreneur',
+    'React Native',
+    'FastAPI',
+    'Golang',
     'Kizito Chiazor',
   ],
   authors: [{ name: 'Kizito Chiazor' }],
   creator: 'Kizito Chiazor',
   openGraph: {
-    title: 'Kizito Chiazor — Software Engineer & Founder',
-    description: 'Building the future, one line of code at a time.',
+    title: 'Kizito Chiazor — Full-Stack Product Engineer',
+    description: 'Selected product, mobile, backend, and infrastructure work.',
     type: 'website',
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Kizito Chiazor — Software Engineer & Founder',
-    description: 'Building the future, one line of code at a time.',
-    creator: '@kizitoch',
+    title: 'Kizito Chiazor — Full-Stack Product Engineer',
+    description: 'Selected product, mobile, backend, and infrastructure work.',
+    creator: '@kizito___',
   },
   robots: { index: true, follow: true },
 };

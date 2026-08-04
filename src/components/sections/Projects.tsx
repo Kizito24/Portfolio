@@ -2,12 +2,11 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence, type Variants } from 'framer-motion';
-import { ExternalLink, Star, TrendingUp } from 'lucide-react';
+import { ExternalLink, LockKeyhole, Star, TrendingUp } from 'lucide-react';
 import { GithubIcon } from '@/components/ui/Icons';
 import { projects } from '@/data';
 
-const categories = ['All', 'Web App', 'Platform', 'Cloud', 'Blockchain', 'Dev Tools', 'FinTech'];
-
+const categories = ['All', 'Product', 'Mobile', 'Backend', 'Infrastructure', 'Web'];
 
 
 const containerVariants: Variants = {
@@ -56,10 +55,10 @@ export default function Projects() {
             id="projects-heading"
             className="text-3xl sm:text-5xl font-extrabold mt-3 text-zinc-900 dark:text-zinc-50 leading-[1.1]"
           >
-            Featured Projects
+            Selected Work
           </h2>
           <p className="text-zinc-500 dark:text-zinc-500 mt-4 max-w-xl mx-auto">
-            A selection of real-world projects that demonstrate my range across web, cloud, and blockchain.
+            Products and client builds across web, mobile, backend systems, and production infrastructure.
           </p>
         </motion.div>
 
@@ -113,7 +112,7 @@ export default function Projects() {
                     {/* Header row */}
                     <div className="flex items-start justify-between mb-3">
                       <div>
-                        <div className="flex items-center gap-2 mb-1">
+                        <div className="flex flex-wrap items-center gap-2 mb-1">
                           <span className="text-xs font-medium px-2 py-0.5 rounded-full bg-indigo-500/10 dark:bg-indigo-500/15 text-indigo-600 dark:text-indigo-400 border border-indigo-500/20">
                             {project.category}
                           </span>
@@ -121,6 +120,12 @@ export default function Projects() {
                             <span className="flex items-center gap-1 text-xs font-medium text-amber-500">
                               <Star size={11} className="fill-amber-500" />
                               Featured
+                            </span>
+                          )}
+                          {project.visibility !== 'Public source' && (
+                            <span className="flex items-center gap-1 text-xs font-medium text-zinc-500 dark:text-zinc-500">
+                              <LockKeyhole size={11} aria-hidden="true" />
+                              {project.visibility}
                             </span>
                           )}
                         </div>
@@ -153,29 +158,50 @@ export default function Projects() {
                       ))}
                     </div>
 
-                    {/* Links */}
-                    <div className="flex items-center gap-3 mt-auto">
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label={`View ${project.title} on GitHub`}
-                        className="flex items-center gap-1.5 text-xs font-semibold text-zinc-500 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors group/link"
-                      >
-                        <GithubIcon size={14} className="group-hover/link:scale-110 transition-transform" />
-                        Source
-                      </a>
-                      <span className="text-zinc-300 dark:text-zinc-700" aria-hidden="true">·</span>
-                      <a
-                        href={project.live}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label={`View ${project.title} live demo`}
-                        className="flex items-center gap-1.5 text-xs font-semibold text-indigo-500 dark:text-indigo-400 hover:text-indigo-600 dark:hover:text-indigo-300 transition-colors group/link"
-                      >
-                        <ExternalLink size={13} className="group-hover/link:scale-110 transition-transform" />
-                        Live Demo
-                      </a>
+                    {/* Only render actions that have a real destination. */}
+                    <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mt-auto min-h-5">
+                      {project.github && (
+                        <a
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={`View ${project.title} source on GitHub`}
+                          className="flex items-center gap-1.5 text-xs font-semibold text-zinc-500 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors group/link"
+                        >
+                          <GithubIcon size={14} className="group-hover/link:scale-110 transition-transform" />
+                          Source
+                        </a>
+                      )}
+                      {project.secondarySource && (
+                        <a
+                          href={project.secondarySource.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={`View ${project.title} ${project.secondarySource.label} on GitHub`}
+                          className="flex items-center gap-1.5 text-xs font-semibold text-zinc-500 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors group/link"
+                        >
+                          <GithubIcon size={14} className="group-hover/link:scale-110 transition-transform" />
+                          {project.secondarySource.label}
+                        </a>
+                      )}
+                      {project.live && (
+                        <a
+                          href={project.live}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={`View ${project.title} live`}
+                          className="flex items-center gap-1.5 text-xs font-semibold text-indigo-500 dark:text-indigo-400 hover:text-indigo-600 dark:hover:text-indigo-300 transition-colors group/link"
+                        >
+                          <ExternalLink size={13} className="group-hover/link:scale-110 transition-transform" />
+                          View live
+                        </a>
+                      )}
+                      {!project.github && !project.secondarySource && !project.live && (
+                        <span className="flex items-center gap-1.5 text-xs font-semibold text-zinc-400 dark:text-zinc-600">
+                          <LockKeyhole size={13} aria-hidden="true" />
+                          Private build
+                        </span>
+                      )}
                     </div>
                   </div>
                 </motion.article>
